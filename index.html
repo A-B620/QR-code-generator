@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR code</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+        .qrcode_section{
+            display: none;
+        }
+        .notifications{
+            display: none;
+        }
+        body{
+            background-position: right 100px top 0;
+        }
+
+    </style>
+</head>
+<body class="flex flex-col items-center bg-[url('./assets/bg.svg')] bg-no-repeat  overflow-hidden m-0 p-0 font-['Outfit'] justify-center text-[16px]  bg-[#111729] h-screen">
+
+    <div class='notifications text-white absolute top-2 h-[40px] p-2 rounded-lg bg-[#4e80ee33] ring-1 ring-[#3662E3] space-x-2'>
+        <p class=''></p>
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1tZWgiPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEwIi8+PGxpbmUgeDE9IjgiIHgyPSIxNiIgeTE9IjE1IiB5Mj0iMTUiLz48bGluZSB4MT0iOSIgeDI9IjkuMDEiIHkxPSI5IiB5Mj0iOSIvPjxsaW5lIHgxPSIxNSIgeDI9IjE1LjAxIiB5MT0iOSIgeTI9IjkiLz48L3N2Zz4=" alt="">
+    </div> 
+
+    <main class=" flex flex-col h-fit  w-screen items-center">
+
+        <div class="searchbar flex flex-col items-center"> 
+            <img src="./assets/logo-qr-generator.svg" alt="" class="">
+
+            <div class=" flex border-2  border-[#3662E3] h-[50px] rounded-xl w-[370px] my-[20px] p-[10px] ">
+                <input type="text" class="urluser outline-none self-center bg-transparent bg-opacity-10 h-[40px] m-[0] rounded-l-xl text-[#F2F5F9] w-[290px] overflow-y-scroll" placeholder="URL ">
+                <button class="bg-[#3662E3] qrbtn rounded-md  text-[#F2F5F9]  ml-[5px] m-[-7px] h-[40px] w-[100px] ">QR code</button>
+            </div>
+            
+        </div>
+      
+
+        <div class="qrcode_section flex flex-col items-center">
+            <button class="goback  rounded-full hover:bg-[#4e80ee33] p-1 absolute top-4 left-1 "><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1hcnJvdy1sZWZ0Ij48cGF0aCBkPSJtMTIgMTktNy03IDctNyIvPjxwYXRoIGQ9Ik0xOSAxMkg1Ii8+PC9zdmc+" alt=""></button>
+            <img src="./assets/logo-qr-generator.svg" alt="" class="absolute top-5 left-9 h-[20px] ">
+
+            <div class="bg-[#4e80ee33] rounded-full h-fit p-4 ">   
+                <div class=" qrcode"></div> 
+            </div>
+          
+            <div class="mt-[30px] flex  space-x-3">
+                <button class="dbtn bg-[#3662E3] w-[130px] py-[10px] text-white rounded-xl flex flex-row justify-center">Download<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1hcnJvdy1iaWctZG93bi1kYXNoIj48cGF0aCBkPSJNMTUgNUg5Ii8+PHBhdGggZD0iTTE1IDl2M2g0bC03IDctNy03aDRWOXoiLz48L3N2Zz4=" alt=""></button>
+                <button class="sbtn  bg-[#3662E3] w-[130px] py-[10px] text-white rounded-xl flex flex-row justify-center space-x-1">Share <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1zaGFyZS0yIj48Y2lyY2xlIGN4PSIxOCIgY3k9IjUiIHI9IjMiLz48Y2lyY2xlIGN4PSI2IiBjeT0iMTIiIHI9IjMiLz48Y2lyY2xlIGN4PSIxOCIgY3k9IjE5IiByPSIzIi8+PGxpbmUgeDE9IjguNTkiIHgyPSIxNS40MiIgeTE9IjEzLjUxIiB5Mj0iMTcuNDkiLz48bGluZSB4MT0iMTUuNDEiIHgyPSI4LjU5IiB5MT0iNi41MSIgeTI9IjEwLjQ5Ii8+PC9zdmc+" alt=""  class="m-1"></button>
+            </div>
+
+
+
+        </div>
+       
+
+    </main>
+    
+</body>
+<script src="https://cdn.rawgit.com/kazuhikoarase/qrcode-generator/master/js/qrcode.js"></script>
+<script>
+    var btnqr=document.querySelector('.qrbtn');
+    var downloadBtn=document.querySelector('.dbtn');
+    var qrsection=document.querySelector('.qrcode_section');
+    var searchbar=document.querySelector('.searchbar');
+    var goback=document.querySelector('.goback');
+    var sharebtn=document.querySelector('.sbtn');
+ 
+    btnqr.addEventListener('click',function(){
+    
+    var userurl=document.querySelector('.urluser').value;
+
+    if(!userurl){
+        var notifications=document.querySelector('.notifications');
+
+        notifications.querySelector('p').innerHTML='Enter a URL';
+        notifications.style.display='flex';
+        setTimeout(() => {
+            notifications.style.display='none';
+        }, 2000); 
+    
+    }
+    var userurl = document.querySelector('.urluser').value;
+var starting = userurl.substring(0, 4);
+var ending = userurl.lastIndexOf('.');
+console.log('string length', userurl.length);
+console.log(starting, ending);
+
+if (!(starting === 'http' || starting === 'https') || (userurl.length - ending <= 2 || userurl.length - ending > 5)) {
+    console.log('invalid');
+    var notifications = document.querySelector('.notifications');
+
+    notifications.querySelector('p').innerHTML = 'Invalid URL';
+    notifications.style.display = 'flex';
+    setTimeout(() => {
+        notifications.style.display = 'none';
+    }, 2000);
+    return;  // Exit if URL is invalid
+}
+
+var code = document.querySelector('.qrcode');
+var qr = qrcode(0, 'L');
+qr.addData(userurl);
+qr.make();
+code.innerHTML = qr.createImgTag();
+var imgElement = code.querySelector('img');
+imgElement.setAttribute('id', 'qr-image');
+imgElement.style.width = "150px";
+imgElement.style.height = "150px";
+imgElement.style.borderRadius = '20px';
+qrsection.style.display = 'flex';
+searchbar.style.display = "none";
+
+
+    });
+
+
+
+    downloadBtn.addEventListener('click', function() {
+            var img = document.getElementById('qr-image');
+            var url =document.querySelector('.urluser').value;
+
+            var a = document.createElement('a');
+            a.href = img.src;
+            a.download = `${url} qrcode.png`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);       
+    
+        });
+
+
+  goback.addEventListener("click",function(){
+    qrsection.style.display='none';
+    searchbar.style.display='flex';
+    var userurl=document.querySelector('.urluser').value='';
+
+
+
+  });
+
+  sharebtn.addEventListener('click',function(){
+    var userurl=document.querySelector('.urluser').value;
+    var img = document.getElementById('qr-image');
+    
+    if (!img) {
+        var notifications=document.querySelector('.notifications');
+
+        notifications.querySelector('p').innerHTML='Create a QR-Code first';
+        notifications.style.display='flex';
+        setTimeout(() => {
+           notifications.style.display='none';
+        }, 2000);
+         }
+
+        fetch(img.src)
+            .then(res => res.blob())
+            .then(blob => {
+                var file = new File([blob], 'qrcode.jpeg', { type: 'image/png' });
+
+                if (navigator.share) {
+                    navigator.share({
+                        title:`This is a QR-CODE of ${userurl}`,
+                        text:`Check out this QR code for ${userurl}`,
+                        files: [file]
+                    }).catch(console.error);
+                } else {
+                    var notifications = document.querySelector('.notifications');
+                    notifications.querySelector('p').innerHTML = 'Web Share API is not supported in your browser.';
+                    notifications.style.display = 'flex';
+                    setTimeout(() => {
+                        notifications.style.display = 'none';
+                    }, 2000);
+                } 
+            });
+
+
+
+      
+
+
+
+  });
+
+
+
+
+
+
+</script>
+
+
+
+</html>
